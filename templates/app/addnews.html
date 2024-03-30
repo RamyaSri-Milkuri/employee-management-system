@@ -1,0 +1,20 @@
+{%extends 'app/home.html'%}
+
+{%load static%}
+
+{%block body_block%}
+
+<center>
+    <div class="news p-4">
+    <h4 class="p-2">Add News</h4>
+    <form method="POST">
+        {%csrf_token%}
+        {{form}}
+        <button>Submit</button>
+    </form>
+    </div>
+</center>
+
+{%endblock%}
+    
+

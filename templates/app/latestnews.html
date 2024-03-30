@@ -1,0 +1,21 @@
+{%extends 'app/home.html'%}
+
+{%load static%}
+
+{%block body_block%}
+
+<center>
+    <h4 class="pt-4 pb-4">Latest News</h4>
+    <table>
+        <thead>
+            <th>Details</th>
+        </thead>
+        {%for i in n%}
+        <tr>
+            <td>{{i.Occation}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</center>
+
+{%endblock%}

@@ -1,0 +1,40 @@
+{%extends 'app/home.html'%}
+
+{%load static%}
+
+{%block body_block%}
+<center>
+<h4 class="p-3">Employee Data</h4>
+<table class="viewdata">
+	<thead>
+		<th>Emp Name</th>
+		<th>Emp Id</th>
+		<th>Designation</th>
+		<th>Date of Joining</th>
+		<th>Department</th>
+		<th>Salary Package</th>
+		<th>Experience</th>
+		<th>HR Section</th>
+	</thead>
+	{%for i in e%}
+	<tr>
+		<td>{{i.Emp_Name}}</td>
+		<td>{{i.Emp_Id}}</td>
+		<td>{{i.Designation}}</td>
+		<td>{{i.Date_of_Joining}}</td>
+		<td>{{i.Department}}</td>
+		<td>{{i.Salary_Package}}</td>
+		<td>{{i.Experience}}</td>
+		<td><a href="/update/{{i.id}}"><button class="btn btn-success text-white border-0 p-2">Update</button></a>
+		<a href="/delete/{{i.id}}"><button class="btn btn-danger text-white border-0 p-2">Delete</button></a></td>
+	</tr>
+	{%endfor%}
+</table>
+<div class="py-4">
+<a href="/data"><button class="btn btn-warning m-1">Download Data</button></a>
+<a href="/addemp"><button class="btn btn-warning m-1">Add Employee</button></a>
+<a href="/manager"><button class="btn btn-warning m-1">Back to HR Manager</button></a>
+</div>
+</center>
+
+{%endblock%}

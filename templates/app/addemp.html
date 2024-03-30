@@ -1,0 +1,16 @@
+{%extends 'app/home.html'%}
+
+{%load static%}
+
+{%block body_block%}
+
+	<div class="addemp py-4 text-center">
+		<h4 class="pb-3">Employee Form</h4>
+	<form method="POST">
+		{%csrf_token%}
+		{{form.as_p}}
+		<button>Submit</button>
+	</form>
+	</div>
+
+{%endblock%}

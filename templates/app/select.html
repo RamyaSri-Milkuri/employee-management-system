@@ -1,0 +1,24 @@
+{%extends 'app/home.html'%}
+
+{%load static%}
+
+{%block body_block%}
+
+<center>
+	<h4>Update Form</h4>
+	<br>
+	<form method="POST">
+		{%csrf_token%}
+
+        Emp Name  <input type="text" name="Emp_Name" value="{{e.Emp_Name}}"><br>
+		Emp Id    <input type="text" name="Emp_Id" value="{{e.Emp_Id}}"><br>
+		Designation  <input type="text" name="Designation" value="{{e.Designation}}"><br>
+		Date of Joining  <input type="text" name="Date_of_Joining" value="{{e.Date_of_Joining}}"><br>
+		Department <input type="text" name="Department" value="{{e.Department}}"><br>
+		Salary Package <input type="text" name="Salary_Package" value="{{e.Salary_Package}}"><br>
+		Experience <input type="text" name="Experience" value="{{e.Experience}}"><br>
+		
+        <button>Submit</button>
+    </form>
+</center>
+{%endblock%}
